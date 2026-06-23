@@ -1,15 +1,18 @@
-// vite.config.ts
 import { defineConfig } from 'vite'
-import { nitro } from 'nitro/vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
 import path from 'path'
+import { tanstackRouter } from '@tanstack/router-plugin/vite'
 
 export default defineConfig({
     plugins: [
-        nitro()
+        tanstackRouter(),
+        react(),
+        tailwindcss(),
     ],
     resolve: {
         alias: {
-            '@': path.resolve(__dirname, './src')
+            '@': path.resolve(process.cwd(), './src')
         }
     }
 })

@@ -19,14 +19,6 @@ import {
 } from "../lib/scheduler";
 
 export const Route = createFileRoute("/")({
-    head: () => ({
-        meta: [
-            { title: "Schedule Weekly — Chagee Store Manager" },
-            { name: "description", content: "Mobile-first weekly shift scheduler for F&B store managers in Indonesia. Auto-generate barista rosters with senior coverage and 2 days off per week." },
-            { property: "og:title", content: "Schedule Weekly — Chagee Store Manager" },
-            { property: "og:description", content: "Plan your café week in seconds: random shift placement, guaranteed senior on open & close, 2 OFF days per person." },
-        ],
-    }),
     component: App,
 });
 
